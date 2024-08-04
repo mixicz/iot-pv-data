@@ -40,7 +40,8 @@ async def main():
 
         # Publish data to NATS
         data['timestamp'] = int(data['timestamp'].timestamp())
-        pprint.pprint(data)
+        # pprint.pprint(data)
+        print("Publishing: timestamp: {}, battery: {}%, pv: {} W, load: {} W, backup: {} W".format(data['timestamp'], data['battery_soc'], data['ppv'], data['load_ptotal'], data['backup_ptotal']))
         await nc.publish(nats_subject, bytes(json.dumps(data), 'utf-8'))
 
         # Wait for next polling interval
