@@ -1,4 +1,6 @@
-ed25519==1.5
-goodwe==0.2.31
-nats-py==2.3.1
-nkeys==0.1.0
+cffi==1.16.0
+goodwe==0.4.8
+nats-py==2.8.0
+nkeys==0.2.0
+pycparser==2.22
+PyNaCl==1.5.0
